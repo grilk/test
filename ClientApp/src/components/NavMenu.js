@@ -33,19 +33,16 @@ export class NavMenu extends Component {
                 <Glyphicon glyph='th-list' /> Fetch data
               </NavItem>
             </LinkContainer>
-<<<<<<< HEAD
             <LinkContainer to={'/test'}>
                 <NavItem>
                     <Glyphicon glyph='th-list' /> Test
               </NavItem>
             </LinkContainer>
-=======
-              <LinkContainer to={'/stargame'}>
-              <NavItem>
-              <Glyphicon glyph='th-list' /> Star Game
+            <LinkContainer to={'/stargame'}>
+                <NavItem>
+                    <Glyphicon glyph='th-list' /> Stargame
               </NavItem>
-              </LinkContainer>
->>>>>>> 4e6defd9daec7a5688feb1cbe59c9deaacc0259c
+            </LinkContainer>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
