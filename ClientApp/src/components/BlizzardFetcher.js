@@ -1,5 +1,5 @@
 ﻿import React, { Component } from 'react';
-const url = 'https://us.api.battle.net/wow/realm/status?locale=en_US&apikey=4vb48bnnfazwve7gsy7ttgukavur86hf'
+const url = 'https://us.api.battle.net/wow/realm/status?locale=en_GB&apikey=4vb48bnnfazwve7gsy7ttgukavur86hf'
 
 export class BlizzardFetcher extends Component {
     constructor() {
@@ -40,8 +40,8 @@ export class BlizzardFetcher extends Component {
                                     <td>{realm.name}</td>
                                     <td>{realm.type}</td>
                                     <td>{realm.population}</td>
-                                    <td>{realm.queue}</td>
-                                    <td>{realm.status}</td>
+                                    <td>{realm.queue.toString()}</td>
+                                    <td>{realm.status.toString()}</td>
                                     <td>{realm.battlegroup}</td>
                                     <td>{realm.timezone}</td>
                                 </tr>
