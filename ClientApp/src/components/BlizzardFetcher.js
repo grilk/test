@@ -1,5 +1,5 @@
 ﻿import React, { Component } from 'react';
-const url = 'https://us.api.battle.net/wow/realm/status?locale=en_GB&apikey=4vb48bnnfazwve7gsy7ttgukavur86hf'
+const url = 'https://eu.api.battle.net/wow/realm/status?locale=en_GB&apikey=4vb48bnnfazwve7gsy7ttgukavur86hf'
 
 export class BlizzardFetcher extends Component {
     constructor() {
@@ -12,7 +12,6 @@ export class BlizzardFetcher extends Component {
         fetch(url)
             .then((Response) => Response.json())
             .then((findresponse) => {
-                console.log(findresponse.realms);
                 this.setState({
                     data: findresponse.realms
                 })
