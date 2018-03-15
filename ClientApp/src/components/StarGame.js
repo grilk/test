@@ -22,10 +22,9 @@ var possibleCombinationSum = function (arr, n) {
 };
 
 const Stars = (props) => {
-
     let stars = [];
     for (let i = 0; i < props.numberOfStars; i++) {
-        stars.push(<i key={i} className="glyphicon glyphicon-star"></i>)
+        stars.push(<i key={i} className={"glyphicon glyphicon-star star-color-" + i}></i>)
     }
 
     return (
@@ -45,7 +44,7 @@ const Button = (props) => {
             break;
         case false:
             button = <button className="btn btn-danger">
-                <i className="glyphicon glyphicon-times"></i>
+                <i className="glyphicon glyphicon-remove"></i>
             </button>
             break;
         default:
@@ -130,6 +129,7 @@ class Game extends React.Component {
 
     selectNumber = (clickedNumber) => {
         if (this.state.selectedNumbers.indexOf(clickedNumber) >= 0) { return; }
+        if (this.state.usedNumbers.indexOf(clickedNumber) >= 0) { return; }
         this.setState(prevState => ({
             answerIsCorrect: null,
             selectedNumbers: prevState.selectedNumbers.concat(clickedNumber)
@@ -200,8 +200,9 @@ class Game extends React.Component {
             doneStatus,
 			} = this.state;
         return (
-            <div className="container">
+            <div className="star-game container">
                 <h3>Play nine</h3>
+                <p>Pick numbers so they equal the amount of stars.</p>
                 <hr />
                 <div className="row">
                     <Stars numberOfStars={randomNumberOfStars} />

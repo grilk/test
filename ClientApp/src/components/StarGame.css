@@ -1,33 +1,62 @@
-﻿.card {
+﻿.star-game .card {
     border: 1px solid lightgrey;
     border-radius: 5px;
     padding: 5px;
 }
 
-.glyphicon-star {
+.star-game .glyphicon-star {
     margin: 0.5em;
     font-size: 24px;
 }
 
-.card span {
+.star-game span {
     display: inline-block;
     margin: 0.5em;
     text-align: center;
     background-color: #ccc;
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
     cursor: pointer;
+    font-size: 20px;
 }
 
-.selected {
+.star-game .selected {
     background-color: #eee;
     color: #ddd;
     cursor: not-allowed;
 }
 
-.used {
+.star-game .used {
     background-color: #aaddaa;
     color: #99bb99;
     cursor: not-allowed;
+}
+
+.star-color-0 {
+    color: #ffa775;
+}
+.star-color-1 {
+    color: #ff9d66;
+}
+.star-color-2 {
+    color: #ff9459;
+}
+.star-color-3 {
+    color: #ff8b4c;
+}
+.star-color-4 {
+    color: #ff813d;
+}
+.star-color-5 {
+    color: #ff7930;
+}
+.star-color-6 {
+    color: #ff6f21;
+}
+.star-color-7 {
+    color: #ff6816;
+}
+.star-color-8 {
+    color: #ff620c;
 }

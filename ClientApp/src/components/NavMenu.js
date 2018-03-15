@@ -40,7 +40,12 @@ export class NavMenu extends Component {
             </LinkContainer>
             <LinkContainer to={'/stargame'}>
                 <NavItem>
-                    <Glyphicon glyph='th-list' /> Stargame
+                    <Glyphicon glyph='star' /> Stargame
+              </NavItem>
+            </LinkContainer>
+            <LinkContainer to={'/notes'}>
+                <NavItem>
+                    <Glyphicon glyph='book' /> Notes
               </NavItem>
             </LinkContainer>
             <LinkContainer to={'/blizzardfetcher'}>
