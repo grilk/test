@@ -48,6 +48,11 @@ export class NavMenu extends Component {
                     <Glyphicon glyph='book' /> Notes
               </NavItem>
             </LinkContainer>
+            <LinkContainer to={'/blizzardfetcher'}>
+                <NavItem>
+                    <Glyphicon glyph='th-list' /> Blizzard
+              </NavItem>
+            </LinkContainer>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

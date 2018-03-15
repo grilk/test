@@ -6,6 +6,8 @@ import { FetchData } from './components/FetchData';
 import { Counter } from './components/Counter';
 import { Test } from './components/Test';
 import { StarGame } from './components/StarGame';
+import { BlizzardFetcher } from './components/BlizzardFetcher';
+
 import { Notes } from './components/Notes';
 
 export default class App extends Component {
@@ -19,6 +21,7 @@ export default class App extends Component {
         <Route path='/fetchdata' component={FetchData} />
         <Route path='/test' component={Test} />
         <Route path='/stargame' component={StarGame} />
+        <Route path='/blizzardfetcher' component={BlizzardFetcher} />
         <Route path='/notes' component={Notes} />
       </Layout>
     );
