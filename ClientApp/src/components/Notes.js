@@ -2,44 +2,59 @@
 import './Notes.css';
 
 
+class CreateNote extends Component {
 
-const CreateNote = (props) => {
+    constructor() {
+        super();
+        this.state = { isModalVisible: false };
+    }
 
-    return (
-        <button className="btn btn-primary">
-            Create new note
-        </button>
-    );
-}
+    showModal() {
+        this.setState({
+            isModalVisible: true
+        });
+    }
 
-const NoteModal = () => {
+    hideModal() {
+        this.setState({
+            isModalVisible: false
+        });
+    }
 
-    return (
-        <div id="myModal" className="modal fade">
-            <div className="modal-dialog">
+    render() {
+
+        const modal = this.state.isModalVisible ?
+            <div id="myModal" className="noteModal">
                 <div className="modal-content">
-                    <div className="modal-header">
-                        <button type="button" className="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 className="modal-title">Confirmation</h4>
-                    </div>
-                    <div className="modal-body">
-                        <p>Do you want to save changes you made to document before closing?</p>
-                        <p className="text-warning"><small>If you don't save, your changes will be lost.</small></p>
-                    </div>
-                    <div className="modal-footer">
-                        <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" className="btn btn-primary">Save changes</button>
-                    </div>
+                    <span className="close">
+                        <i className="glyphicon glyphicon-remove" onClick={() => this.hideModal()}></i>
+                    </span>
+                    <form>
+                        <div className="note-title col-md-12">
+                            <input type="text" className="form-control" placeholder="Enter the title of your note here..." />
+                        </div>
+                        <div className="note-text col-md-12">
+                            <textarea className="form-control" placeholder="Enter the text of your note here..." />
+                        </div>
+                    </form>
                 </div>
             </div>
-        </div>
-    );
+            :
+            "";
+
+        return (
+            <div>
+                <button className="btn btn-primary" onClick={() => this.showModal()}>
+                    Create new note
+                </button>
+                {modal}
+            </div>
+        );
+    }
 }
 
-class Note extends React.Component {
 
-    openNewNoteModal = () => {
-    }
+class Note extends Component {
 
     render() {
         return (
@@ -47,7 +62,6 @@ class Note extends React.Component {
                 <h1>Your personal notes</h1>
                 <hr />
                 <CreateNote />
-                <NoteModal />
             </div>
         );
     }
