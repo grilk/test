@@ -47,12 +47,8 @@ export class BlizzardFetcher extends Component {
                             )}
                         </tbody>
                     </table>
-
                 }
             </div>
         )
     }
-
-
-
 }
