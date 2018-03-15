@@ -40,7 +40,7 @@ class CreateNote extends Component {
                 </div>
             </div>
             :
-            "";
+            null;
 
         return (
             <div>
