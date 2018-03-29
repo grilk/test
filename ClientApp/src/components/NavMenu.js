@@ -53,6 +53,11 @@ export class NavMenu extends Component {
                     <Glyphicon glyph='th-list' /> Blizzard
               </NavItem>
             </LinkContainer>
+            <LinkContainer to={'/quiz'}>
+                <NavItem>
+                    <Glyphicon glyph='question-sign' /> Quiz
+              </NavItem>
+            </LinkContainer>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

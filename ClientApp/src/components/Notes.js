@@ -72,10 +72,12 @@ class Note extends Component {
         tempArray[index] = this.state.noteInput;
 
         this.setState(prevState => ({
-            writtenNotes: tempArray
+            writtenNotes: tempArray,
+            showEditButton: false
         }));
 
         saveToLocalStorage(this.state.writtenNotes);
+        this.noteInputTextArea.value = '';
     }
 
     cancelUpdateNote = () => {
@@ -92,10 +94,12 @@ class Note extends Component {
         tempArray.splice(index, 1);
 
         this.setState(prevState => ({
-            writtenNotes: tempArray
+            writtenNotes: tempArray,
+            showEditButton: false
         }));
 
         saveToLocalStorage(this.state.writtenNotes);
+        this.noteInputTextArea.value = '';
     }
 
     editNote = (index, event) => {

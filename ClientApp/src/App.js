@@ -7,6 +7,7 @@ import { Counter } from './components/Counter';
 import { Test } from './components/Test';
 import { StarGame } from './components/StarGame';
 import { BlizzardFetcher } from './components/BlizzardFetcher';
+import { Quiz } from './components/Quiz';
 
 import { Notes } from './components/Notes';
 
@@ -23,6 +24,7 @@ export default class App extends Component {
         <Route path='/stargame' component={StarGame} />
         <Route path='/blizzardfetcher' component={BlizzardFetcher} />
         <Route path='/notes' component={Notes} />
+        <Route path='/quiz' component={Quiz} />
       </Layout>
     );
   }
