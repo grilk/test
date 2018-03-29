@@ -98,7 +98,7 @@ class FetchQuestion extends Component {
             showGameDialog: false,
             gameOver: false,
             newGameMenu: true,
-            questionTimer: 5000,
+            questionTimer: 20000,
         }
     }
 
@@ -154,7 +154,7 @@ class FetchQuestion extends Component {
                     correctAnswer: correctAnswer,
                     category: category,
                     shuffledAnswers: shuffledAllAlternativesArray,
-                    questionTimer: 5000,
+                    questionTimer: 20000,
                 })
             })
         this.startTimer();
