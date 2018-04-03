@@ -55,7 +55,12 @@ export class NavMenu extends Component {
             </LinkContainer>
             <LinkContainer to={'/quiz'}>
                 <NavItem>
-                    <Glyphicon glyph='question-sign' /> Quiz
+                    <Glyphicon glyph='education' /> Quiz
+              </NavItem>
+            </LinkContainer>
+            <LinkContainer to={'/mazingcontest'}>
+                <NavItem>
+                    <Glyphicon glyph='random' /> Mazing Contest
               </NavItem>
             </LinkContainer>
           </Nav>

@@ -106,6 +106,7 @@ class FetchQuestion extends Component {
 
         this.setState({
             showGameDialog: false,
+            startTimer: 20000,
         })
 
         let correctAnswer = document.getElementsByClassName("correctAnswer");
@@ -156,13 +157,8 @@ class FetchQuestion extends Component {
                     shuffledAnswers: shuffledAllAlternativesArray,
                     questionTimer: 20000,
                 })
+                this.startTimer();
             })
-        this.startTimer();
-    }
-
-    componentDidMount() {
-
-        this.fetchNewQuestion();
     }
 
 
@@ -255,6 +251,7 @@ class FetchQuestion extends Component {
         this.setState({
             newGameMenu: false,
         })
+        this.fetchNewQuestion();
     }
 
 
@@ -270,6 +267,7 @@ class FetchQuestion extends Component {
                             this.state.gameOver ?
                                 <div className="tryAgainContainer">
                                     <h2>Game Over!</h2>
+                                    <h3 className="endResult">You got a total of {this.state.numberOfCorrectAnswers} correct answers, good job!</h3>
                                     <button className="btn btn-primary menuButton" onClick={this.resetGame}>Try again &raquo;</button>
                                 </div>
                                 :
