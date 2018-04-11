@@ -63,6 +63,11 @@ export class NavMenu extends Component {
                     <Glyphicon glyph='random' /> Mazing Contest
               </NavItem>
             </LinkContainer>
+            <LinkContainer to={'/numpad'}>
+                <NavItem>
+                    <Glyphicon glyph='th-list' /> Numpad trainer
+              </NavItem>
+            </LinkContainer>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

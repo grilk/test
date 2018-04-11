@@ -6,11 +6,11 @@ import { FetchData } from './components/FetchData';
 import { Counter } from './components/Counter';
 import { Test } from './components/Test';
 import { StarGame } from './components/StarGame';
+import { Notes } from './components/Notes';
 import { BlizzardFetcher } from './components/BlizzardFetcher';
 import { Quiz } from './components/Quiz';
 import { MazingContest } from './components/MazingContest';
-
-import { Notes } from './components/Notes';
+import { NumpadTrainer } from './components/NumpadTrainer';
 
 export default class App extends Component {
   displayName = App.name
@@ -27,6 +27,7 @@ export default class App extends Component {
         <Route path='/notes' component={Notes} />
         <Route path='/quiz' component={Quiz} />
         <Route path='/mazingcontest' component={MazingContest} />
+        <Route path='/numpad' component={NumpadTrainer} />
       </Layout>
     );
   }
